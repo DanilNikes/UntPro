@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from myclass_library import Film
 from myclass_library import  FilmList
-from flask_cors import CORS
+# from flask_cors import CORS
 from pymongo import MongoClient
 
 cluster = MongoClient('mongodb+srv://admin:Jhtk79@cluster0-3ijkd.mongodb.net/UntitledProject?retryWrites=true&w=majority')
@@ -10,8 +10,8 @@ collection = db['films']
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
-CORS(app)
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+# CORS(app)
+# cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/catalog/<catalog_page_id>', methods=["GET"])
 def main_page(catalog_page_id):
