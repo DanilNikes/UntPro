@@ -50,4 +50,4 @@ def insert_comment_fo_film():
     })
     collection.update_one({"_id": idd}, {'$set': {"comments": result}})
     return('')
-app.run()
+# app.run()
